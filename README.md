@@ -93,9 +93,6 @@ Finally, we return the first moment of the `count`, which is the expected value 
 return UxHwDoubleNthMoment(count, 1);
 ```
 
-## Notes
-We can see that the Signaloid UxHw implementation is much closer to the mathematical description of the process. The only trick that we had to use was the use of a mixture `UxHwDoubleMixture` to simulate an `if-condition`.
-
 ## Running
 To run this code, load this repository on to the [Signaloid Cloud Development Platform](https://signaloid.io/repositories), and hit run. 
 
@@ -103,5 +100,7 @@ You should see an output like:
 
 <img width="765" alt="image" src="https://github.com/janithpet/signaloid-constants/assets/22471198/2b8bd347-a5ff-46db-91e4-379b30323847">
 
-
-
+## Notes
+- We can see that the Signaloid UxHw implementation is much closer to the mathematical description of the process. The only trick that we had to use was the use of a mixture `UxHwDoubleMixture` to simulate an `if-condition`.
+- The output from the Signaloid UxHw implementation always gives the same result, but the result from the Monte Carlo method changes each time you run this code.
+- Further increasing the `n_monte_carlo` should stabilize this. However, note that even with `n_monte_carlo = 100,000`, there is some variability.
