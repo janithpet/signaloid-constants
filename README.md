@@ -74,7 +74,7 @@ double e(void) {
 }
 ```
 
-The key difference here is that we don't need an outer Monte Carlo loop. Instead we deal with the distributions directly. That is, we initialize the `rolling_sum` and `count` to be zero. We then loop for `n` times the following code:
+The key difference here is that we don't need an outer Monte Carlo loop. Instead we deal with the distributions directly. That is, we initialize the `rolling_sum` and `count` to be delta distributions at 0. We then loop for `n` times, updating these with other distributions:
 ```C
 double p 	= UxHwDoubleProbabilityGT(rolling_sum, 1.0);
 count 		+= UxHwDoubleMixture(1, 0, 1 - p);
