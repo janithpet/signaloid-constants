@@ -98,5 +98,7 @@ Finally, we return the first moment of the `count`, which is the expected value 
 return UxHwDoubleNthMoment(count, 1);
 ```
 
+## Notes
+We can see that the Signaloid UxHw implementation is much closer to the mathematical description of the process. The only trick that we had to use was the use of a mixture `UxHwDoubleMixture` to simulate an `if-condition`.
 
 
