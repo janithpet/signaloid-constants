@@ -93,7 +93,7 @@ We then add to the `count` a mixture between 1 and 0, where the probability of a
 
 At the end of the loop, we add a uniform distribution to the `rolling_sum`.
 
-Finally, we return the first moment of the `count`, which is the expected value of $e$ using
+Finally, we return the first moment of the `count`, which is the expected value of `count` using
 ```C
 return UxHwDoubleNthMoment(count, 1);
 ```
