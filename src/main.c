@@ -28,8 +28,8 @@ double sample_uniform(double min, double max) {
  * \return An estimate of `e`.
  */
 double simple_e(void) {
-	double n_monte_carlo = 50000; // number of Monte Carlo repetitions.
-	double total_count   = 0;     // total count for taking average at end.
+	double n_monte_carlo = 100000; // number of Monte Carlo repetitions.
+	double total_count   = 0;      // total count for taking average at end.
 
 	for (int i = 0; i < n_monte_carlo; i++) {
 		double rolling_sum = 0;
