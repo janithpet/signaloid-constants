@@ -79,7 +79,7 @@ The key difference here is that we don't need an outer Monte Carlo loop. Instead
 double p 	= UxHwDoubleProbabilityGT(rolling_sum, 1.0);
 count 		+= UxHwDoubleMixture(1, 0, 1 - p);
 
-rolling_sum += UxHwDoubleUniformDist(0, 1);
+rolling_sum 	+= UxHwDoubleUniformDist(0, 1);
 ```
 
 The first line calculates the probability that the `rolling_sum` is greate than 1. We can think of this as the proportion of the current distribution of the `rolling_sum` that is greate than 1.
@@ -93,7 +93,7 @@ Finally, we return the first moment of the `count`, which is the expected value 
 return UxHwDoubleNthMoment(count, 1);
 ```
 
-## Running
+## Usage
 To run this code, load this repository on to the [Signaloid Cloud Development Platform](https://signaloid.io/repositories), and hit run. 
 
 You should see an output like:
