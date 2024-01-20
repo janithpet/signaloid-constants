@@ -9,7 +9,9 @@ Implements a method for calculating the constant $e$ using the [Signaloid UxHw A
 
 The following is a summary of the method present in the paper [Estimating the value of $e$ using the Monte Carlo method by K. G. Russel](https://www.jstor.org/stable/2685243?seq=1#page_scan_tab_contents).
 
-The method is as follows. Let $E$ be a random variable defined as the minimum number $n \in \mathcal{N}$ such that $\sum_{i=1}^n u_i > 1$, where $u_i \sim \mathcal{U}(0, 1)$. $\mathcal{U}(0, 1)$ denotes the uniform distribution on the interval $[0, 1]$. Then, $e$ can be approximated by the expected value $\mathbb{E}[E]$.
+The method is as follows:
+
+Let $E$ be a random variable defined as the minimum number $n \in \mathcal{N}$ such that $\sum_{i=1}^n u_i > 1$, where $u_i \sim \mathcal{U}(0, 1)$. $\mathcal{U}(0, 1)$ denotes the uniform distribution on the interval $[0, 1]$. Then, $e$ can be approximated by the expected value $\mathbb{E}[E]$.
 
 ## Implementation
 Implementations of the raw Monte Carlo estimate and the Signaloid UxHw method can be found in `src/main.c`.
