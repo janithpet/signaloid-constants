@@ -64,15 +64,10 @@ double e(void) {
 	double count       = 0;
 
 	for (int i = 0; i < n; i++) {
-		double p = UxHwDoubleProbabilityGT(
-				rolling_sum,
-				1.0);
-		rolling_sum += UxHwDoubleUniformDist(
-				0,
-				1);
+		double p = UxHwDoubleProbabilityGT(rolling_sum, 1.0);
+		rolling_sum += UxHwDoubleUniformDist(0, 1);
 
-		count +=
-				UxHwDoubleMixture(1, 0, 1 - p);
+		count += UxHwDoubleMixture(1, 0, 1 - p);
 	}
 
 	return UxHwDoubleNthMoment(count, 1);
