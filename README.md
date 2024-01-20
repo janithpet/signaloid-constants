@@ -1,0 +1,1 @@
+# signaloid-constants
