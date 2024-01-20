@@ -70,15 +70,10 @@ double e(void) {
 	double count       = 0;
 
 	for (int i = 0; i < n; i++) {
-		double p = UxHwDoubleProbabilityGT(
-				rolling_sum,
-				1.0); // calculates the proportion of rolling_sum that is > 1.
-		count +=
-				UxHwDoubleMixture(1, 0, 1 - p); // add to count when rolling_sum < 1.
+		double p = UxHwDoubleProbabilityGT(rolling_sum, 1.0); // calculates the proportion of rolling_sum that is > 1.
+		count += UxHwDoubleMixture(1, 0, 1 - p);              // add to count when rolling_sum < 1.
 
-		rolling_sum += UxHwDoubleUniformDist(
-				0,
-				1); // updates rolling sum by adding another uniform random variable.
+		rolling_sum += UxHwDoubleUniformDist(0, 1); // updates rolling sum by adding another uniform random variable.
 	}
 
 	return UxHwDoubleNthMoment(count, 1);
