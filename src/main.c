@@ -83,5 +83,5 @@ int main(void) {
 	srand(time(NULL)); // set random seed.
 
 	printf("Laplace e:\t%f\n", e());
-	printf("Simple e:\t%f\0", simple_e());
+	printf("Simple e:\t%f\n", simple_e());
 }
