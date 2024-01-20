@@ -97,7 +97,7 @@ return UxHwDoubleNthMoment(count, 1);
 We can see that the Signaloid UxHw implementation is much closer to the mathematical description of the process. The only trick that we had to use was the use of a mixture `UxHwDoubleMixture` to simulate an `if-condition`.
 
 ## Running
-To run this code, load this repository on to the Signaloid Cloud Development Platform, and hit run. 
+To run this code, load this repository on to the [Signaloid Cloud Development Platform](https://signaloid.io/repositories), and hit run. 
 
 You should see an output like:
 
