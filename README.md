@@ -41,14 +41,14 @@ double simple_e(void) {
 We carry out `n_monte_carlo` repetitions of
 ```C
 double rolling_sum = 0;
-		double count       = 0;
+double count       = 0;
 
-		while (rolling_sum < 1) {
-			count += 1;
-			rolling_sum += sample_uniform(0, 1);
-		}
+while (rolling_sum < 1) {
+	count += 1;
+	rolling_sum += sample_uniform(0, 1);
+}
 
-		total_count += count;
+total_count += count;
 ```
 where we keep a `count` of the number of samples it took for the `rolling_sum` to exceed 1. During each iteration of the `while` loop, we sample from a uniform using `sample_uniform(0, 1)` and add it to the `rolling_sum`.
 
